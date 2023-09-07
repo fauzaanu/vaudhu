@@ -58,3 +58,4 @@ class IbuAslamSpider(CrawlSpider):
         subprocess.run(["git", "push"], cwd=os.path.dirname(os.path.realpath(__file__)))
 
         print(f"Spider closed: {reason}")
+
