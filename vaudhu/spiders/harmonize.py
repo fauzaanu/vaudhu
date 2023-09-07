@@ -17,7 +17,7 @@ class IbuAslamSpider(CrawlSpider):
     )
 
     def parse_page(self, response):
-        tracking_files_dir = Path(__file__).parent.parent / 'Ibu_tracking_files'
+        tracking_files_dir = Path(__file__).parent.parent / f'{self.name}_tracking_files'
         tracking_files_dir.mkdir(exist_ok=True)
 
         current_uuid = str()
