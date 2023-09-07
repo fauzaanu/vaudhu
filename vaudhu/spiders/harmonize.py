@@ -52,7 +52,8 @@ class IbuAslamSpider(CrawlSpider):
         import subprocess
         import os
 
-        subprocess.run(["git", "add", "."], cwd=os.path.dirname(os.path.realpath(__file__)))
+
+        subprocess.run(["git", "add", "."], cwd=os.path.dirname(os.path.realpath(__file__)) + os.sep + "..")
         subprocess.run(["git", "commit", "-m", f"Scraped {self.name}"], cwd=os.path.dirname(os.path.realpath(__file__)))
         subprocess.run(["git", "push"], cwd=os.path.dirname(os.path.realpath(__file__)))
 
